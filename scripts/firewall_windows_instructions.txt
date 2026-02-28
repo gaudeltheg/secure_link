@@ -1,0 +1,18 @@
+SecureLink Windows Firewall Guidance (run from elevated CMD, optional)
+
+These commands are NOT executed by the app.
+They are provided for admins to copy/paste when needed.
+
+1) Allow inbound TCP transport port:
+netsh advfirewall firewall add rule name="SecureLink TCP 5000" dir=in action=allow protocol=TCP localport=5000
+
+2) Allow inbound UDP discovery port:
+netsh advfirewall firewall add rule name="SecureLink UDP 5556" dir=in action=allow protocol=UDP localport=5556
+
+3) Verify rules:
+netsh advfirewall firewall show rule name="SecureLink TCP 5000"
+netsh advfirewall firewall show rule name="SecureLink UDP 5556"
+
+4) Remove rules if needed:
+netsh advfirewall firewall delete rule name="SecureLink TCP 5000"
+netsh advfirewall firewall delete rule name="SecureLink UDP 5556"
