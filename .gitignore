@@ -1,0 +1,9 @@
+# Virtual env
+.venv/
+# Python
+__pycache__/
+*.pyc
+# Database
+securelink.db
+# OS
+.DS_Store
